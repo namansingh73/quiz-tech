@@ -1,0 +1,10 @@
+export const QUIZ_ENABLED = "QUIZ_ENABLED";
+export const LOAD_QUIZ = "LOAD_QUIZ";
+export const APP_STATE = "APP_STATE";
+export const TIMER_HOME = "TIMER_HOME";
+export const START_QUIZ = "START_QUIZ";
+export const TIMER_QUIZ = "TIMER_QUIZ";
+export const CURRENT_QUESTION = "CURRENT_QUESTION";
+export const SELECTED_OPTION = "SELECTED_OPTION";
+export const END_QUIZ = "END_QUIZ";
+export const RESTART_QUIZ = "RESTART_QUIZ";

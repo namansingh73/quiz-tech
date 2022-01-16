@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./pages/Home";
+import { useSelector } from "react-redux";
+import Instructions from "./pages/Instructions";
+import Quiz from "./pages/Quiz";
+import Result from "./pages/Result";
 
-function App() {
+const App = () => {
+  const { appState } = useSelector(({ quiz }) => {
+    return {
+      appState: quiz.appState,
+    };
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {appState === "initial" && <Home />}
+      {appState === "instructions" && <Instructions />}
+      {appState === "quizStarted" && <Quiz />}
+      {appState === "quizEnded" && <Result />}
     </div>
   );
-}
+};
 
 export default App;
